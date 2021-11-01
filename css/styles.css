@@ -13,6 +13,9 @@ body {
 }
 .logo {
   color: #000000;
+}
+.logo,
+.footer.logo {
   font-family: Raleway, sans-serif;
   font-size: 26px;
   font-weight: 700;
@@ -113,8 +116,8 @@ body {
 .footer.logo {
   color: var(--active-text-color);
 }
-.address,
-.footer {
+.link.address,
+.link.footer {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -125,6 +128,7 @@ body {
 }
 .footer {
   color: rgba(255, 255, 255, 0.6);
+  background-color: var(--second-background-color);
 }
 
 /* Портфолио */
