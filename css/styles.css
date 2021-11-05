@@ -2,6 +2,8 @@
   --header-background-color: #ffffff;
   --primary-background-color: #e5e5e5;
   --second-background-color: #2f303a;
+  --team-background-color: #f5f4fa;
+  --logo-text-color: #000000;
   --accent-text-color: #2196f3;
   --active-text-color: #ffffff;
   --primary-text-color: #757575;
@@ -12,61 +14,63 @@ body {
   background-color: var(--primary-background-color);
   font-family: Roboto, sans-serif;
 }
-.list {
+ul {
   list-style: none;
+}
+a {
+  text-decoration: none;
 }
 /* Хедер */
 .header {
   background-color: var(--header-background-color);
 }
-/* Логотип */
-.header .logo {
-  color: #000000;
-}
-.footer .logo {
-  color: var(--active-text-color);
-}
-.logo > span {
+.header a:hover,
+.header a:focus,
+.header a:active {
   color: var(--accent-text-color);
 }
-.logo {
+/* Логотип */
+.header-logo {
+  color: var(--logo-text-color);
+}
+.footer-logo {
+  color: var(--active-text-color);
+}
+.web-logo {
+  color: var(--accent-text-color);
+}
+.header-logo,
+.web-logo,
+.footer-logo {
   font-family: Raleway, sans-serif;
   font-size: 26px;
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: 0.03em;
-  text-decoration: none;
-}
-.logo:hover,
-.logo:focus,
-.logo:active {
-  color: var(--accent-text-color);
 }
 /* Навигация */
-.site-nav .link {
+.nav-link {
   color: var(--title-text-color);
 }
-.site-nav .link.current {
+.nav-link.current {
   color: var(--accent-text-color);
 }
-.link {
+.contact-link {
   color: inherit;
+}
+.nav-link,
+.contact-link {
   font-size: 14px;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  text-decoration: none;
 }
-.link:hover,
-.link:focus,
-.link:active {
-  color: var(--accent-text-color);
-}
+
 /* Шапка */
-.hat {
+.main-section {
   background-color: var(--second-background-color);
 }
-.hat-title {
+.main-title {
   color: var(--active-text-color);
   font-size: 44px;
   font-weight: 900;
@@ -74,10 +78,7 @@ body {
   letter-spacing: 0.06em;
   text-align: center;
 }
-.button,
-.button:hover,
-.button:focus,
-.button:active {
+.primary-button {
   background-color: var(--accent-text-color);
   color: var(--active-text-color);
   cursor: pointer;
@@ -88,6 +89,12 @@ body {
   letter-spacing: 0.06em;
   text-align: center;
 }
+.primary-button:hover,
+.primary-button:focus,
+.primary-button:active {
+  background-color: var(--accent-text-color);
+  color: var(--active-text-color);
+}
 /* Особенности */
 .feature-title {
   color: var(--title-text-color);
@@ -95,13 +102,11 @@ body {
   font-weight: 700;
   line-height: 1.14;
   letter-spacing: 0.03em;
-  text-align: left;
 }
 .feature-text {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  text-align: left;
 }
 /* Чем мы занимаемся + Наша команда */
 .section-title {
@@ -112,7 +117,10 @@ body {
   letter-spacing: 0.03em;
   text-align: center;
 }
-.team-title {
+.team-section {
+  background-color: var(--team-background-color);
+}
+.teammate-title {
   color: var(--title-text-color);
   font-size: 16px;
   font-weight: 500;
@@ -120,7 +128,7 @@ body {
   letter-spacing: 0.03em;
   text-align: center;
 }
-.team-text {
+.teammate-position {
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
@@ -130,29 +138,30 @@ body {
 .footer {
   background-color: var(--second-background-color);
 }
-.link.address {
+address {
+  font-style: normal;
+}
+.map-link {
   color: var(--active-text-color);
 }
-.link.footer {
+.footer-contact-link {
   color: rgba(255, 255, 255, 0.6);
 }
-.link.address,
-.link.footer {
+.map-link,
+.footer-contact-link {
   font-size: 14px;
-  font-style: normal;
   font-weight: 400;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  text-align: left;
 }
-.footer .link:hover,
-.footer .link:focus,
-.footer .link:active {
+.footer a:hover,
+.footer a:focus,
+.footer a:active {
   color: var(--accent-text-color);
 }
 
 /* Портфолио */
-.filter-button {
+.secondary-button {
   background-color: #f5f4fa;
   color: var(--title-text-color);
   cursor: pointer;
@@ -163,9 +172,9 @@ body {
   letter-spacing: 0.03em;
   text-align: center;
 }
-.filter-button:focus,
-.filter-button:hover,
-.filter-button:active {
+.secondary-button:focus,
+.secondary-button:hover,
+.secondary-button:active {
   background-color: var(--accent-text-color);
   color: var(--active-text-color);
 }
@@ -175,7 +184,6 @@ body {
   font-weight: 700;
   line-height: 2;
   letter-spacing: 0.06em;
-  text-align: left;
 }
 .project-text {
   color: var(--primary-text-color);
@@ -183,5 +191,4 @@ body {
   font-weight: 400;
   line-height: 1.88;
   letter-spacing: 0.03em;
-  text-align: left;
 }
