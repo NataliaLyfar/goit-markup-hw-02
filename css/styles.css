@@ -8,6 +8,10 @@
   --active-text-color: #ffffff;
   --primary-text-color: #757575;
   --title-text-color: #212121;
+  --footer-contact-link-color: rgba(255, 255, 255, 0.6);
+  --primary-button-backgroud-color: #2196f3;
+  --secondary-button-background-color: #f5f4fa;
+  --secondary-btn-active-bcg-color: #2196f3;
 }
 body {
   color: var(--primary-text-color);
@@ -20,15 +24,14 @@ ul {
 a {
   text-decoration: none;
 }
+address {
+  font-style: normal;
+}
 /* Хедер */
 .header {
   background-color: var(--header-background-color);
 }
-.header a:hover,
-.header a:focus,
-.header a:active {
-  color: var(--accent-text-color);
-}
+
 /* Логотип */
 .header-logo {
   color: var(--logo-text-color);
@@ -48,6 +51,17 @@ a {
   line-height: 1.2;
   letter-spacing: 0.03em;
 }
+.header-logo:hover,
+.header-logo:focus,
+.header-logo:active,
+.web-logo:hover,
+.web-logo:focus,
+.web-logo:active,
+.footer-logo:hover,
+.footer-logo:focus,
+.footer-log:active {
+  color: var(--accent-text-color);
+}
 /* Навигация */
 .nav-link {
   color: var(--title-text-color);
@@ -65,7 +79,17 @@ a {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-
+.nav-link:hover,
+.nav-link:focus,
+.nav-link:active,
+.contact-link:hover,
+.contact-link:focus,
+.contact-link:active,
+.nav-link.current:hover,
+.nav-link.current:focus,
+.nav-link.current:active {
+  color: var(--accent-text-color);
+}
 /* Шапка */
 .main-section {
   background-color: var(--second-background-color);
@@ -79,7 +103,7 @@ a {
   text-align: center;
 }
 .primary-button {
-  background-color: var(--accent-text-color);
+  background-color: var(--primary-button-backgroud-color);
   color: var(--active-text-color);
   cursor: pointer;
   font-family: inherit;
@@ -92,7 +116,7 @@ a {
 .primary-button:hover,
 .primary-button:focus,
 .primary-button:active {
-  background-color: var(--accent-text-color);
+  background-color: var(--primary-button-backgroud-color);
   color: var(--active-text-color);
 }
 /* Особенности */
@@ -138,14 +162,11 @@ a {
 .footer {
   background-color: var(--second-background-color);
 }
-address {
-  font-style: normal;
-}
 .map-link {
   color: var(--active-text-color);
 }
 .footer-contact-link {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--footer-contact-link-color);
 }
 .map-link,
 .footer-contact-link {
@@ -154,15 +175,18 @@ address {
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
-.footer a:hover,
-.footer a:focus,
-.footer a:active {
+.map-link:hover,
+.map-link:focus,
+.map-link:active,
+.footer-contact-link:hover,
+.footer-contact-link:focus,
+.footer-contact-link:active {
   color: var(--accent-text-color);
 }
 
 /* Портфолио */
 .secondary-button {
-  background-color: #f5f4fa;
+  background-color: var(--secondary-button-background-color);
   color: var(--title-text-color);
   cursor: pointer;
   font-family: inherit;
@@ -175,7 +199,7 @@ address {
 .secondary-button:focus,
 .secondary-button:hover,
 .secondary-button:active {
-  background-color: var(--accent-text-color);
+  background-color: var(--secondary-btn-active-bcg-color);
   color: var(--active-text-color);
 }
 .project-title {
